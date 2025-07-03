@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YRuvarashe Cynthia Mabika</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray background */
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px; /* Space for the underline */
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%; /* Adjust width of the underline */
+            height: 4px; /* Thickness of the underline */
+            background-color: #6366f1; /* Indigo color for underline */
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-indigo-700 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold rounded-md px-3 py-2 hover:bg-indigo-600 transition duration-300">Ruvarashe Cynthia Mabika</a>
+            <div class="space-x-4">
+                <a href="#about" class="text-white hover:text-indigo-200 text-lg rounded-md px-3 py-2 hover:bg-indigo-600 transition duration-300">About</a>
+                <a href="#skills" class="text-white hover:text-indigo-200 text-lg rounded-md px-3 py-2 hover:bg-indigo-600 transition duration-300">Skills</a>
+                <a href="#projects" class="text-white hover:text-indigo-200 text-lg rounded-md px-3 py-2 hover:bg-indigo-600 transition duration-300">Projects</a>
+                <a href="#contact" class="text-white hover:text-indigo-200 text-lg rounded-md px-3 py-2 hover:bg-indigo-600 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20 text-center shadow-lg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-4 animate-fade-in-down">Hello, I'm Ruvarashe!</h2>
+            <p class="text-2xl md:text-3xl mb-8 animate-fade-in-up">MSc Data Analytics & Visualizations Student</p>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                Passionate about transforming complex data into actionable insights to drive informed decisions.
+            </p>
+            <a href="#projects" class="bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-8 rounded-full text-xl shadow-lg transition duration-300 transform hover:scale-105">
+                View My Work
+            </a>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 section-title mx-auto">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+                <div class="md:w-1/3">
+                    <img src="images/ruva.jpg" alt="Your Photo"
+                         class="rounded-full shadow-lg mx-auto w-48 h-48 object-cover border-4 border-indigo-300">
+                </div>
+                <div class="md:w-2/3 text-lg text-gray-700 text-left">
+                    <p class="mb-4">
+                        I am a dedicated Master of Science student in Data Analytics and Visualization, currently honing my skills in extracting meaningful patterns and insights from large datasets. My academic journey has equipped me with a strong foundation in statistical analysis, machine learning, and data visualization.
+                    </p>
+                    <p class="mb-4">
+                        I am proficient in Python, SQL, and various data analysis tools. I have hands-on experience with building analytical dashboards using Tableau and Power BI, effectively transforming complex data into clear, actionable insights. I thrive on solving real-world problems through data-driven approaches and I am continuously exploring new technologies and methodologies in the ever-evolving field of data science.
+                    </p>
+                    <p>
+                        My goal is to leverage data to create impactful solutions and contribute to informed decision-making in any organization. I am highly motivated and always eager to learn new skills that enhance my ability to deliver value through data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 section-title mx-auto">Skills</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- Data Analysis & ML -->
+                <div class="bg-white p-6 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-700">Data Analysis & ML</h3>
+                    <ul class="list-disc list-inside text-left text-gray-700">
+                        <li>Python (Pandas, NumPy, Scikit-learn)</li>
+                        <li>Machine Learning (Regression, Classification, Clustering)</li>
+                        <li>Exploratory Data Analysis (EDA)</li>
+                    </ul>
+                </div>
+                <!-- Databases & Tools -->
+                <div class="bg-white p-6 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-700">Databases & Tools</h3>
+                    <ul class="list-disc list-inside text-left text-gray-700">
+                        <li>SQL (PostgreSQL, MySQL)</li>
+                        <li>Jupyter Notebook/Lab</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+                <!-- Visualization & Reporting -->
+                <div class="bg-white p-6 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-700">Visualization & Reporting</h3>
+                    <ul class="list-disc list-inside text-left text-gray-700">
+                        <li>Tableau, Power BI</li>
+                        <li>Matplotlib, Seaborn, Plotly</li>
+                        <li>Data Storytelling</li>
+                        <li>Dashboard Development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 section-title mx-auto">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1: Customer Churn Analysis -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-3 text-indigo-800">Hybrid ensemble learning classifier for handling imbalanced data in customer churn prediction</h3>
+                    <p class="text-gray-700 mb-4">
+                        Developed a hybrid ensemble learning classifier for handling imbalanced data in customer churn prediction on a telecom dataset, dealing with the issue of data imbalances.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4 justify-center">
+                        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Pandas</span>
+                        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Scikit-learn</span>
+                        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Numpy</span>
+                        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Matplotlib</span>
+                    </div>
+                    <a href="https://github.com/your-github/customer-churn-analysis" target="_blank" class="inline-block bg-indigo-600 text-white py-2 px-6 rounded-full hover:bg-indigo-700 transition duration-300 font-semibold shadow-md">
+                        View Project on GitHub
+                    </a>
+                </div>
+
+                <!-- Project Card 2: Sales Performance Dashboard -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-3 text-indigo-800">Flight Delay and Cancellation Analytical Dashboard</h3>
+                    <p class="text-gray-700 mb-4">
+                        Collaborated with my course mates to create an interactive analytical dashboard using a flight dataset, focusing on delays and cancellations. Together, we explored key performance indicators, visualized trends, and identified factors contributing to flight disruptions. This collaborative effort enhanced my skills in data analysis, visualization, and teamwork while providing valuable insights into flight operations.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4 justify-center">
+                        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tableau</span>
+                        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tableau Prep</span>
+                        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">SQL</span>
+                        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Data Cleaning</span>
+                    </div>
+                    <a href="https://public.tableau.com/profile/your-tableau-profile/sales-dashboard" target="_blank" class="inline-block bg-indigo-600 text-white py-2 px-6 rounded-full hover:bg-indigo-700 transition duration-300 font-semibold shadow-md">
+                        View Dashboard
+                    </a>
+                </div>
+
+                <!-- Project Card 3: Social Media Sentiment Analysis -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-3 text-indigo-800">Chronic Disease Management System</h3>
+                    <p class="text-gray-700 mb-4">
+                        Developed a Chronic Disease Management System using PostgreSQL. This project involved designing a star schema data warehouse, implementing ETL processes, and writing complex SQL queries to manage and analyze patient data. 
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4 justify-center">
+                        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">PostgreSQL</span>
+                        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">ETL Processes</span>
+                        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">SQL</span>
+                        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Database Design</span>
+                    </div>
+                    <a href="https://github.com/your-github/social-media-sentiment" target="_blank" class="inline-block bg-indigo-600 text-white py-2 px-6 rounded-full hover:bg-indigo-700 transition duration-300 font-semibold shadow-md">
+                        View Project on GitHub
+                    </a>
+                </div>
+
+                <!-- Add more project cards here by copying and modifying the above structure -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 section-title mx-auto">Get In Touch</h2>
+            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                I'm always open to discussing new projects, collaborations, or opportunities in Data Analytics. Feel free to reach out!
+            </p>
+            <div class="flex flex-col items-center space-y-4">
+                <a href="mailto:ruvarashecy@gmail.com" class="bg-indigo-600 text-white py-3 px-8 rounded-full text-xl hover:bg-indigo-700 transition duration-300 font-semibold shadow-md">
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/ruvarashe-cynthia-mabika/" target="_blank" class="text-indigo-700 hover:text-indigo-900 text-lg flex items-center space-x-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.447 20.452h-3.529v-5.593c0-1.336-.027-3.054-1.853-3.054-1.854 0-2.136 1.445-2.136 2.956v5.691H9.357V9.617h3.382v1.56h.045c.474-.895 1.636-1.839 3.33-1.839 3.567 0 4.223 2.35 4.223 5.405v6.229zM5.005 6.727c-1.163 0-2.103-.939-2.103-2.095 0-1.156.94-2.096 2.103-2.096 1.162 0 2.102.94 2.102 2.096 0 1.156-.94 2.095-2.102 2.095zm1.753 13.725h-3.507V9.617h3.507v10.835z"></path>
+                    </svg>
+                    <span>LinkedIn Profile</span>
+                </a>
+                <a href="https://github.com/ruvacynthia" target="_blank" class="text-indigo-700 hover:text-indigo-900 text-lg flex items-center space-x-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.499.09.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.007.07 1.532 1.03 1.532 1.03.892 1.529 2.341 1.089 2.91.833.091-.647.359-1.088.659-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.391-1.996 1.03-2.693-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.7.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.099 2.65.64.697 1.029 1.597 1.029 2.693 0 3.848-2.339 4.695-4.566 4.943.37.319.671.92.671 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C21.137 20.17 24 16.415 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>GitHub Profile</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-700 text-white py-6 text-center text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 ruva_cynthia. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruvarashe Cynthia Mabika | Data Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712;
+            color: #d1d5db;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -12px;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #8b5cf6, #ec4899);
+            border-radius: 2px;
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-20px) translateX(15px); }
+            100% { transform: translateY(0px) translateX(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delay {
+            animation: float 7s ease-in-out infinite reverse;
+        }
+
+        .reveal {
+            visibility: hidden;
+        }
+
+        .glowing-card {
+            position: relative;
+            background-color: transparent !important;
+            border: none !important;
+            transition: transform 0.3s ease;
+        }
+
+        .glowing-card .card-content {
+            position: relative;
+            z-index: 1;
+            background-color: #111827;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            height: 100%;
+            border: 1px solid #374151;
+            transition: border-color 0.3s ease;
+        }
+
+        .glowing-card::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            background: linear-gradient(to right, #8b5cf6, #ec4899);
+            border-radius: 0.8rem;
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .glowing-card:hover::before {
+            opacity: 1;
+        }
+
+        .glowing-card:hover .card-content {
+            border-color: transparent;
+        }
+
+        .glowing-card:hover {
+            transform: translateY(-4px);
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+        .scroller {
+            animation: scroll 40s linear infinite;
+        }
+        .scroller:hover {
+            animation-play-state: paused;
+        }
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="bg-gray-950/70 backdrop-blur-lg sticky top-0 z-50 shadow-lg shadow-black/20 border-b border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl font-bold gradient-text">Ruvarashe C. Mabika</a>
+                </div>
+                <div class="hidden md:flex md:items-center md:space-x-2">
+                    <a href="#about" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">About</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Skills</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="bg-purple-600 text-white hover:bg-purple-700 px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 shadow-md shadow-purple-600/20">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6 block" id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+                        <svg class="h-6 w-6 hidden" id="menu-close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#skills" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="relative py-24 md:py-32 text-center overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+             <div class="absolute top-0 left-0 w-64 h-64 bg-purple-600 rounded-full filter blur-3xl animate-float"></div>
+             <div class="absolute bottom-0 right-0 w-72 h-72 bg-pink-600 rounded-full filter blur-3xl animate-float-delay"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10 reveal">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4">Hello, I'm <span class="gradient-text">Ruvarashe!</span></h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">MSc Data Analytics & Visualizations Student</p>
+            <p class="text-md md:text-lg max-w-2xl mx-auto mb-10 text-gray-400">
+                Passionate about transforming complex data into actionable insights and compelling stories.
+            </p>
+            <a href="#projects" class="bg-purple-600 text-white hover:bg-purple-500 font-bold py-3 px-8 rounded-full text-lg shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105">
+                View My Work
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="reveal">
+                <h2 class="text-4xl font-bold mb-20 text-center text-white relative section-title">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
+                    <div class="md:w-1/3 flex justify-center">
+                        <div class="relative">
+                            <img src="images/ruva.jpg" alt="Ruvarashe Cynthia Mabika"
+
+                                 class="rounded-full shadow-2xl shadow-black/50 mx-auto w-48 h-48 md:w-64 md:h-64 object-cover">
+                            <div class="absolute inset-0 rounded-full border-4 border-purple-500/30 animate-pulse"></div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 text-lg text-gray-300 text-left space-y-4">
+                        <p>
+                            I am a dedicated Master of Science student in Data Analytics and Visualization, honing my skills in extracting meaningful patterns from large datasets. My academic journey has built a strong foundation in statistical analysis, machine learning, and data visualization.
+                        </p>
+                        <p>
+                            Proficient in <strong class="font-semibold text-purple-400">Python, SQL, Tableau, and Power BI</strong>, I have hands-on experience building analytical dashboards that transform complex data into clear, actionable insights. I thrive on solving real-world problems and am continuously exploring new technologies in the ever-evolving field of data science.
+                        </p>
+                        <p>
+                            My goal is to leverage data to create impactful solutions and contribute to informed decision-making. I'm highly motivated and eager to learn new skills to deliver value through data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 bg-gray-950">
+        <div class="container mx-auto px-4 text-center reveal">
+            <h2 class="text-4xl font-bold mb-16 text-white relative section-title">My Toolkit</h2>
+            <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
+                <div class="flex w-max scroller">
+                    <div class="flex w-max items-center justify-center animate-scroll">
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="h-16 mx-auto mb-2" alt="Python"/>Python</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" class="h-16 mx-auto mb-2" alt="Pandas"/>Pandas</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" class="h-16 mx-auto mb-2" alt="NumPy"/>NumPy</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" class="h-16 mx-auto mb-2" alt="Scikit-learn"/>Scikit-learn</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="h-16 mx-auto mb-2" alt="PostgreSQL"/>PostgreSQL</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="h-16 mx-auto mb-2" alt="MySQL"/>MySQL</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="images/tableau.svg" class="h-16 mx-auto mb-2" alt="Tableau"/>Tableau</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="images/power-bi.svg" class="h-16 mx-auto mb-2" alt="Power BI"/>Power BI</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="h-16 mx-auto mb-2" alt="Git"/>Git</div>
+                    </div>
+                    <div class="flex w-max items-center justify-center animate-scroll" aria-hidden="true">
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="h-16 mx-auto mb-2" alt="Python"/>Python</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" class="h-16 mx-auto mb-2" alt="Pandas"/>Pandas</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" class="h-16 mx-auto mb-2" alt="NumPy"/>NumPy</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" class="h-16 mx-auto mb-2" alt="Scikit-learn"/>Scikit-learn</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="h-16 mx-auto mb-2" alt="PostgreSQL"/>PostgreSQL</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="h-16 mx-auto mb-2" alt="MySQL"/>MySQL</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="images/tableau.svg" class="h-16 mx-auto mb-2" alt="Tableau"/>Tableau</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="images/power-bi.svg" class="h-16 mx-auto mb-2" alt="Power BI"/>Power BI</div>
+                        <div class="mx-6 text-center text-gray-400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="h-16 mx-auto mb-2" alt="Git"/>Git</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="reveal">
+                <h2 class="text-4xl font-bold mb-20 text-center text-white relative section-title">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group glowing-card">
+                        <div class="card-content">
+                            <h3 class="text-xl font-bold mb-2 text-white">Customer Churn Prediction</h3>
+                            <p class="text-gray-400 mb-4 text-sm h-20">Developed a hybrid ensemble learning classifier to handle imbalanced telecom data and predict customer churn effectively.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-purple-900/50 text-purple-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-purple-900/50 text-purple-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Scikit-learn</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-2 bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-purple-600 transition duration-300 font-semibold text-sm">View on GitHub <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6.1 0-1.3-.5-2.4-1.3-3.2.1-.3.5-1.5-.1-3.2 0 0-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1c-.6 1.7-.2 2.9-.1 3.2-.8.8-1.3 1.9-1.3 3.2 0 4.7 2.7 5.8 5.5 6.1-.6.5-.9 1.2-.9 2.2v3.5"/></svg></a>
+                        </div>
+                    </div>
+                     <div class="group glowing-card">
+                        <div class="card-content">
+                            <h3 class="text-xl font-bold mb-2 text-white">Flight Delay & Cancellation Dashboard</h3>
+                            <p class="text-gray-400 mb-4 text-sm h-20">Collaborated to create an interactive Tableau dashboard analyzing flight delays and cancellations, identifying key contributing factors.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-900/50 text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tableau</span>
+                                <span class="bg-blue-900/50 text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">SQL</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-2 bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition duration-300 font-semibold text-sm">View Dashboard <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                        </div>
+                    </div>
+                    <div class="group glowing-card">
+                        <div class="card-content">
+                            <h3 class="text-xl font-bold mb-2 text-white">Chronic Disease Management System</h3>
+                            <p class="text-gray-400 mb-4 text-sm h-20">Designed a star schema data warehouse and developed ETL processes in PostgreSQL to manage and analyze patient data.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-green-900/50 text-green-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">PostgreSQL</span>
+                                <span class="bg-green-900/50 text-green-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">ETL</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-2 bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-green-600 transition duration-300 font-semibold text-sm">View on GitHub <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6.1 0-1.3-.5-2.4-1.3-3.2.1-.3.5-1.5-.1-3.2 0 0-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1c-.6 1.7-.2 2.9-.1 3.2-.8.8-1.3 1.9-1.3 3.2 0 4.7 2.7 5.8 5.5 6.1-.6.5-.9 1.2-.9 2.2v3.5"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-gray-950">
+        <div class="container mx-auto px-4 reveal">
+            <div class="bg-gray-900 rounded-2xl p-8 md:p-12 border border-gray-800 text-center relative overflow-hidden">
+                 <div class="absolute top-0 left-0 w-32 h-32 bg-purple-600/20 rounded-full filter blur-2xl"></div>
+                 <div class="absolute bottom-0 right-0 w-32 h-32 bg-pink-600/20 rounded-full filter blur-2xl"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Let's Build Something Together</h2>
+                <p class="text-lg text-gray-400 mt-4 mb-8 max-w-2xl mx-auto">
+                    I'm currently seeking new opportunities and collaborations. My inbox is always open!
+                </p>
+                <a href="mailto:ruvarashecy@gmail.com" class="bg-purple-600 text-white py-3 px-6 rounded-full text-lg hover:bg-purple-500 transition duration-300 font-semibold shadow-lg shadow-purple-500/30 transform hover:scale-105">
+                    Say Hello
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 border-t border-gray-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-center md:text-left">
+                     <a href="#" class="text-base font-bold gradient-text">Ruvarashe C. Mabika</a>
+                </div>
+                <div class="flex gap-6 text-sm text-gray-400">
+                    <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+                    <a href="#skills" class="hover:text-purple-400 transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.linkedin.com/in/ruvarashe-cynthia-mabika/" target="_blank" class="text-gray-400 hover:text-purple-400 transition-colors">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.529v-5.593c0-1.336-.027-3.054-1.853-3.054-1.854 0-2.136 1.445-2.136 2.956v5.691H9.357V9.617h3.382v1.56h.045c.474-.895 1.636-1.839 3.33-1.839 3.567 0 4.223 2.35 4.223 5.405v6.229zM5.005 6.727c-1.163 0-2.103-.939-2.103-2.095 0-1.156.94-2.096 2.103-2.096 1.162 0 2.102.94 2.102 2.096 0 1.156-.94 2.095-2.102 2.095zm1.753 13.725h-3.507V9.617h3.507v10.835z"></path></svg>
+                    </a>
+                    <a href="https://github.com/ruvacynthia" target="_blank" class="text-gray-400 hover:text-purple-400 transition-colors">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.499.09.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.007.07 1.532 1.03 1.532 1.03.892 1.529 2.341 1.089 2.91.833.091-.647.359-1.088.659-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.391-1.996 1.03-2.693-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.7.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.099 2.65.64.697 1.029 1.597 1.029 2.693 0 3.848-2.339 4.695-4.566 4.943.37.319.671.92.671 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C21.137 20.17 24 16.415 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-6 pt-6 border-t border-gray-800/50 text-center text-sm text-gray-500">
+                <p>&copy; 2025 Ruvarashe Cynthia Mabika. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = document.getElementById('menu-open-icon');
+        const menuCloseIcon = document.getElementById('menu-close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuOpenIcon.classList.toggle('hidden');
+            menuCloseIcon.classList.toggle('hidden');
+        });
+
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    menuOpenIcon.classList.remove('hidden');
+                    menuCloseIcon.classList.add('hidden');
+                }
+            });
+        });
+
+        const sr = ScrollReveal({
+            distance: '50px',
+            duration: 1500,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            reset: false
+        });
+
+        sr.reveal('.reveal', {
+            origin: 'bottom',
+            interval: 200
+        });
+    </script>
+
+</body>
+</html>
